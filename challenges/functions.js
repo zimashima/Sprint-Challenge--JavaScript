@@ -32,7 +32,10 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 // Explain in your own words why nestedfunction can access the variable internal.
 
 // Explanation: 
-// Because nestedFunction was inside the block scope of myFuction. Once a variable is declared in myFunction, it can be used with any function that was created inside of myFunction. The same way how myFunction can call the variable external that is outside of it, because variable in Global scope can be access by anything nested inside of it.
+//      Because nestedFunction was inside the block scope of myFuction. 
+//      Once a function is executed/ invoked, it will look for any variables inside of that function first. If the variable does not exist, it will look for it in the outer scope.
+//      In this case, nestedFunction would look for internal inside its own, before it started looking in myFunction, and then in the Global Scope respectively.
+//      The same way how myFunction can call the variable external that is outside of it, because variable in Global scope can be access by anything nested inside of it.
 
 const external = "I'm outside the function";
 
