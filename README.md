@@ -43,8 +43,8 @@ Edit this document to include your answers after each question. Make sure to lea
 
         In order to understand closures, it is important to understand scope. When a scope is declared, variables and functions will belong inside of it.
         The main biggest scope is the global scope where all other function can be created and executed inside of this scope.
-        When a function is created, a new scope is created called local scope. So does a closure. Any other function nested in or variables that are created inside that function belongs to that scope and this is the context where the function execution of that scope happens. 
-        When another function is created, the same thing happens. There will be another scope inside of that scope, and any execution of function will happen inside that scope.
+        When a function is created, a new scope is created, so does a closure. This scope is called a local scope. Any other function nested in or variables that are created within that function belongs to that scope, and this is the context where the function execution of that scope happens. 
+        When another function is created, the same thing happens. There will be another scope inside of that scope, and any execution of function happes within that scope.
 
         When a function is excecuted, it will look for the variables inside of a scope first, however, if that variable doesn't exist inside of a scope, it will look for that variable in the outer scope. And then outer and outer scopes. Closures are pretty much a function insides of a function, and it can takes value from the scope greater than its own.
 
