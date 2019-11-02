@@ -30,13 +30,46 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+        The biggest difference between the two is that: 
+            .forEach() will iterate over each item in an array and complete the instruction individually
+            .map() will iterate over the whole array and complete the action on all array or as instructed
+
 2. What is the difference between a function and a method?
+
+        A method is a function created as a value of a key inside an object. Thus, it can be invoked called by using dot(.) after an object.
+        A function is created separately and is not tied to any specific objects like method.
 
 3. What is closure?
 
+        In order to understand closures, it is important to understand scope. When a scope is declared, variables and functions will belong inside of it.
+        The main biggest scope is the global scope where all other function can be created and executed inside of this scope.
+        When a function is created, a new scope is created, so does a closure. This scope is called a local scope. Any other function nested in or variables that are created within that function belongs to that scope, and this is the context where the function execution of that scope happens. 
+        When another function is created, the same thing happens. There will be another scope inside of that scope, and any execution of function happes within that scope.
+
+        When a function is excecuted, it will look for the variables inside of a scope first, however, if that variable doesn't exist inside of a scope, it will look for that variable in the outer scope. And then outer and outer scopes. Closures are pretty much a function insides of a function, and it can takes value from the scope greater than its own.
+
 4. Describe the four rules of the 'this' keyword.
 
+        1) Window binding
+        it is when this is used in global scope, this will bind to window. Window value could be anything. If use with strict mode, it will return undefined, otherwise, it will return window
+        
+        2) Implicit binding
+        It is when the value of the key in an object is a function, and when the function is invoked, the value that 'this' refers to will be on the left of the dot. 
+        In other words, this refers to values inside that object scope where the function was created.
+
+        3) New binding
+        New binding relates to consturctor function. 
+        When an object is created using keyword 'new' follows by a constructor function, 'this' will bind to this new object that is just created 
+        
+        4) Explicit binding
+        When .call() or .apply() method is used, 'this' will be defined explicitly
+
 5. Why do we need super() in an extended class?
+
+        Super allows child class to access key:value constructor and the method in parent class. While keyword extends point the child class where its parent class is, super has to be used inseparably in order to inherit the constructor and functions stored in parent class.
+        
+
+
 
 ## Project Set up
 
